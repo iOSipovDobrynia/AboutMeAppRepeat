@@ -39,11 +39,11 @@ class LoginViewController: UIViewController {
         
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
-    @IBAction func forgotYourLoginButtonPressed() {
-        showAlert(withTitle: "Here is your login", andMessage: "Dobrynia")
-    }
-    @IBAction func forgotYourPasswordButtonPressed() {
-        showAlert(withTitle: "Here is your password", andMessage: "Osipov")
+    @IBAction func forgotButtonPressed(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(withTitle: "Here is your login", andMessage: "Dobrynia")
+        : showAlert(withTitle: "Here is your password", andMessage: "Osipov")
+
     }
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         loginTF.text = ""
