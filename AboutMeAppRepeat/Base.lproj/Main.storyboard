@@ -32,7 +32,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V91-zk-84Q">
                                         <rect key="frame" x="0.0" y="117.99999999999999" width="350" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="enter"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="log in"/>
                                         <connections>
                                             <segue destination="bam-a8-oQ8" kind="presentation" modalPresentationStyle="fullScreen" id="kCd-w7-Ker"/>
                                         </connections>
@@ -94,11 +94,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1z-oc-Ax3">
+                                <rect key="frame" x="176.66666666666666" y="797" width="76.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="log out"/>
+                                <connections>
+                                    <segue destination="n3z-O9-gLX" kind="unwind" unwindAction="unwindFor:" id="Iqf-IY-bEa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KCc-4T-QCg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KCc-4T-QCg" firstAttribute="bottom" secondItem="B1z-oc-Ax3" secondAttribute="bottom" constant="100" id="9B4-n2-Gx7"/>
                             <constraint firstItem="t3p-fc-IhN" firstAttribute="centerY" secondItem="j91-bD-xhN" secondAttribute="centerY" id="GhY-fL-mmM"/>
+                            <constraint firstItem="B1z-oc-Ax3" firstAttribute="centerX" secondItem="j91-bD-xhN" secondAttribute="centerX" id="YCv-IP-ax7"/>
                             <constraint firstItem="t3p-fc-IhN" firstAttribute="centerX" secondItem="j91-bD-xhN" secondAttribute="centerX" id="hLd-yG-odz"/>
                         </constraints>
                     </view>
@@ -107,6 +117,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xR-N5-zEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="n3z-O9-gLX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="979" y="-2"/>
         </scene>

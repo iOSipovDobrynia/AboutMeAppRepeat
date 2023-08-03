@@ -37,12 +37,17 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
     //MARK: -IBActions
     @IBAction func forgotYourLoginButtonPressed() {
         showAlert(withTitle: "Here is your login", andMessage: "Dobrynia")
     }
     @IBAction func forgotYourPasswordButtonPressed() {
         showAlert(withTitle: "Here is your password", andMessage: "Osipov")
+    }
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        loginTF.text = ""
+        passwordTF.text = ""
     }
 }
 
