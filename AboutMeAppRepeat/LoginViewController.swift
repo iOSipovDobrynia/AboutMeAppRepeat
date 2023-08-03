@@ -19,28 +19,26 @@ class LoginViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginText = loginTF.text, !loginText.isEmpty,
-              let passwordText = passwordTF.text, !passwordText.isEmpty else {
-            showAlert(withTitle: "Input error", andMessage: "Check text fields")
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {
             return
         }
-        if loginTF.text == login && passwordTF.text == password {
-            guard let welcomeVC = segue.destination as? WelcomeViewController else {
-                return
-            }
-            welcomeVC.greetPerson = login
-        } else {
-            showAlert(withTitle: "Auth Error", andMessage: "Check you login and password")
-            return
-        }
+        welcomeVC.greetPerson = login
     }
     
     
     //MARK: -IBActions
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        guard loginTF.text == login && passwordTF.text == password else {
+            showAlert(withTitle: "Auth Error", andMessage: "Check you login and password")
+            return
+        }
+        
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+    }
     @IBAction func forgotYourLoginButtonPressed() {
         showAlert(withTitle: "Here is your login", andMessage: "Dobrynia")
     }
