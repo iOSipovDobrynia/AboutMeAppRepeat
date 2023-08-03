@@ -17,9 +17,11 @@ class LoginViewController: UIViewController {
     private let login = "Dobrynia"
     private let password = "Osipov"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let loginText = loginTF.text, !loginText.isEmpty,
               let passwordText = passwordTF.text, !passwordText.isEmpty else {
