@@ -33,7 +33,10 @@ class LoginViewController: UIViewController {
     //MARK: -IBActions
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         guard loginTF.text == login && passwordTF.text == password else {
-            showAlert(withTitle: "Auth Error", andMessage: "Check you login and password")
+            showAlert(
+                withTitle: "Auth Error",
+                andMessage: "Check you login and password"
+            )
             return
         }
         
@@ -43,7 +46,6 @@ class LoginViewController: UIViewController {
         sender.tag == 0
         ? showAlert(withTitle: "Here is your login", andMessage: "Dobrynia")
         : showAlert(withTitle: "Here is your password", andMessage: "Osipov")
-
     }
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         loginTF.text = ""
