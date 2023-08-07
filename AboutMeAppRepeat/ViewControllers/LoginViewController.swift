@@ -34,8 +34,12 @@ class LoginViewController: UIViewController {
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.greetPerson = login
-            } else {
-                return
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let personInfoVC = navigationVC.topViewController as? PersonInfoViewController else {
+                    return
+                }
+                personInfoVC.title = "Person Info"
+                
             }
             
         }

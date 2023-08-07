@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="65" y="-2"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="bpo-iK-E8r">
             <objects>
                 <viewController id="bam-a8-oQ8" customClass="WelcomeViewController" customModule="AboutMeAppRepeat" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <constraint firstItem="t3p-fc-IhN" firstAttribute="centerX" secondItem="j91-bD-xhN" secondAttribute="centerX" id="hLd-yG-odz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Jxv-TJ-Mti"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Jxv-TJ-Mti"/>
                     <connections>
                         <outlet property="greetingLabel" destination="t3p-fc-IhN" id="Db9-Ko-ka9"/>
                     </connections>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="978" y="776"/>
         </scene>
-        <!--View Controller-->
+        <!--Person Info View Controller-->
         <scene sceneID="clH-XV-bUO">
             <objects>
-                <viewController id="cGl-Ha-7eb" sceneMemberID="viewController">
+                <viewController id="cGl-Ha-7eb" customClass="PersonInfoViewController" customModule="AboutMeAppRepeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tl7-Qm-gkh">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="3686.5116279069766" y="19.95708154506438"/>
         </scene>
-        <!--View Controller-->
+        <!--Bio View Controller-->
         <scene sceneID="uTa-dB-cx0">
             <objects>
-                <viewController id="a1c-Bv-3SF" sceneMemberID="viewController">
+                <viewController id="a1c-Bv-3SF" customClass="BioViewController" customModule="AboutMeAppRepeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5or-IH-5p3">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +184,7 @@
         <scene sceneID="Vdn-6S-A8W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bey-Jh-Idv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="teU-iV-EhT"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="person.fill" catalog="system" id="teU-iV-EhT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jhv-SM-uOl">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="96"/>
@@ -201,6 +201,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
