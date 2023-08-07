@@ -16,6 +16,7 @@
 		E3BAB95F2A7998F40075FC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BAB95E2A7998F40075FC67 /* Assets.xcassets */; };
 		E3BAB9622A7998F40075FC67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BAB9602A7998F40075FC67 /* LaunchScreen.storyboard */; };
 		E3BAB96A2A799A990075FC67 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BAB9692A799A990075FC67 /* WelcomeViewController.swift */; };
+		E3E7D1E52A8177DE0062EE1E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E7D1E42A8177DE0062EE1E /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E3BAB9612A7998F40075FC67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3BAB9632A7998F40075FC67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3BAB9692A799A990075FC67 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E3E7D1E42A8177DE0062EE1E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +94,21 @@
 		E3BAB9542A7998F40075FC67 /* AboutMeAppRepeat */ = {
 			isa = PBXGroup;
 			children = (
+				E3E7D1E32A8177C80062EE1E /* Models */,
 				E3B3B1352A80C7F40095020C /* ViewControllers */,
 				E3B3B1342A80C7CC0095020C /* App */,
 				E3B3B1362A80C8020095020C /* Storyboards */,
 				E3BAB95E2A7998F40075FC67 /* Assets.xcassets */,
 			);
 			path = AboutMeAppRepeat;
+			sourceTree = "<group>";
+		};
+		E3E7D1E32A8177C80062EE1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3E7D1E42A8177DE0062EE1E /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				E30879E72A80CB3400D0AA3E /* PersonInfoViewController.swift in Sources */,
 				E3BAB96A2A799A990075FC67 /* WelcomeViewController.swift in Sources */,
 				E3BAB9562A7998F40075FC67 /* AppDelegate.swift in Sources */,
+				E3E7D1E52A8177DE0062EE1E /* Person.swift in Sources */,
 				E3BAB9582A7998F40075FC67 /* SceneDelegate.swift in Sources */,
 				E30879E52A80CB1400D0AA3E /* BioViewController.swift in Sources */,
 			);
