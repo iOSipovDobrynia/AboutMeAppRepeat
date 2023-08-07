@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    let user = Person.getPerson()
     
     //MARK: -IBOutlets
     @IBOutlet var loginTF: UITextField!
@@ -33,20 +34,15 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.greetPerson = login
+                welcomeVC.greetPerson = user
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let personInfoVC = navigationVC.topViewController as? PersonInfoViewController else {
                     return
                 }
-                personInfoVC.title = "Person Info"
-                
+                personInfoVC.person = user
             }
             
         }
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
-        }
-        welcomeVC.greetPerson = login
     }
     
     

@@ -8,22 +8,25 @@
 import UIKit
 
 class PersonInfoViewController: UIViewController {
-
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var lastnameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.title = "Person Info"
+        nameLabel.text = person.name
+        lastnameLabel.text = person.lastname
+        ageLabel.text = person.age.formatted()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let bioVC = segue.destination as? BioViewController else {
+            return
+        }
+        bioVC.bio = person.bio
     }
-    */
-
 }
