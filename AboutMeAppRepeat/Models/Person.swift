@@ -5,6 +5,20 @@
 //  Created by Goodwasp on 07.08.2023.
 //
 
+struct User {
+    let login: String
+    let password: String
+    let person: Person
+    
+    static func getUser() -> User {
+        User(
+            login: "Dobrynia",
+            password: "Osipov",
+            person: Person.getPerson()
+        )
+    }
+}
+
 struct Person {
     let name: String
     let lastname: String

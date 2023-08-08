@@ -9,17 +9,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    //MARK: -IBOutlets
+    //MARK: - IBOutlets
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    //MARK: -Private prop
-    private let user = Person.getPerson()
-
-    private let login = "Dobrynia"
-    private let password = "Osipov"
+    //MARK: - Private prop
+    private let user = User.getUser()
     
     // MARK: - Override Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loginTF.text = user.login
+        passwordTF.text = user.password
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -36,12 +39,12 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.greetPerson = user
+                welcomeVC.greetPerson = user.person
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let personInfoVC = navigationVC.topViewController as? PersonInfoViewController else {
                     return
                 }
-                personInfoVC.person = user
+                personInfoVC.person = user.person
             }
         }
     }
@@ -49,7 +52,7 @@ class LoginViewController: UIViewController {
     
     //MARK: -IBActions
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard loginTF.text == login && passwordTF.text == password else {
+        guard loginTF.text == user.login && passwordTF.text == user.password else {
             showAlert(
                 withTitle: "Auth Error",
                 andMessage: "Check you login and password"
