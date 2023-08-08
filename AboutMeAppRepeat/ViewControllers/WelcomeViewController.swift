@@ -8,13 +8,15 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet var greetingLabel: UILabel!
     
+    // MARK: - Public Properties
     var greetPerson: Person!
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingLabel.text = "Welcome, " + greetPerson.name
     }
-    // MARK: - Navigation
 }

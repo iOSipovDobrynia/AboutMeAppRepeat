@@ -9,12 +9,15 @@ import UIKit
 
 class PersonInfoViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var lastnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     
+    // MARK: - Public Properties
     var person: Person!
     
+    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Person Info"

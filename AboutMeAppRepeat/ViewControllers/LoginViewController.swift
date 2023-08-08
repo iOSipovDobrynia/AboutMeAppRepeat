@@ -8,16 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    let user = Person.getPerson()
     
     //MARK: -IBOutlets
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     //MARK: -Private prop
+    private let user = Person.getPerson()
+
     private let login = "Dobrynia"
     private let password = "Osipov"
     
+    // MARK: - Override Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -41,7 +43,6 @@ class LoginViewController: UIViewController {
                 }
                 personInfoVC.person = user
             }
-            
         }
     }
     
