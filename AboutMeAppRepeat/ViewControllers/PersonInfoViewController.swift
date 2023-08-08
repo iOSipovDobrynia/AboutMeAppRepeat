@@ -13,6 +13,7 @@ class PersonInfoViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var lastnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var photoImage: UIImageView!
     
     // MARK: - Public Properties
     var person: Person!
@@ -24,6 +25,7 @@ class PersonInfoViewController: UIViewController {
         nameLabel.text = person.name
         lastnameLabel.text = person.lastname
         ageLabel.text = person.age.formatted()
+        photoImage.image = UIImage(named: person.photo)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

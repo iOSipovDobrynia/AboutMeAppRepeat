@@ -24,13 +24,15 @@ struct Person {
     let lastname: String
     let age: Int
     let bio: String
+    let photo: String
     
     static func getPerson() -> Person {
         Person(
             name: "Dobrynia",
             lastname: "Osipov",
             age: 23,
-            bio: "Born in May of 2000. Raised in the city of Vladimir. Educated at Moscow Power Engineering Institute (MPEI). Currently employed at QTE. Also studying iOS development using Swift at SwiftBook."
+            bio: "Born in May of 2000. Raised in the city of Vladimir. Educated at Moscow Power Engineering Institute (MPEI). Currently employed at QTE. Also studying iOS development using Swift at SwiftBook.",
+            photo: "DobOs"
         )
     }
 }

@@ -64,8 +64,8 @@ class LoginViewController: UIViewController {
     }
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Here is your login", andMessage: "Dobrynia")
-        : showAlert(withTitle: "Here is your password", andMessage: "Osipov")
+        ? showAlert(withTitle: "Here is your login", andMessage: user.login)
+        : showAlert(withTitle: "Here is your password", andMessage: user.password)
     }
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         loginTF.text = ""
